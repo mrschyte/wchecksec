@@ -52,7 +52,7 @@ class PESecurityFlags():
 
     def aslr(self):
         if self.pe is not None:
-            return self.pe.OPTIONAL_HEADER.DllCharacteristics & 0x100 != 0
+            return self.pe.OPTIONAL_HEADER.DllCharacteristics & 0x40 != 0
         return None
 
     def safeseh(self):
